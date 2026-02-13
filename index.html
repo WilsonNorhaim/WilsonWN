@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>RPWiki — Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- Шапка с поиском (X стиль) -->
+        <header class="site-header">
+            <div class="header-content">
+                <div class="logo-area">
+                    <h1 class="logo">RPWiki</h1>
+                    <span class="logo-badge">beta</span>
+                </div>
+                <div class="search-container">
+                    <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20">
+                        <path fill="currentColor" d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.177-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z"/>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Поиск по тегам..." autocomplete="off">
+                </div>
+            </div>
+        </header>
+
+        <!-- Основной контент: категории (X стиль) -->
+        <main class="categories-page">
+            <div class="categories-grid">
+                <a href="category-events.html?page=1" class="category-card">
+                    <div class="category-icon">📅</div>
+                    <h2>События</h2>
+                    <p>Актуальные и исторические события RP мира</p>
+                    <span class="category-stats">1 статья</span>
+                </a>
+                <a href="category-biographies.html?page=1" class="category-card">
+                    <div class="category-icon">👤</div>
+                    <h2>Биографии</h2>
+                    <p>Персонажи, лидеры, легенды</p>
+                    <span class="category-stats">0 статей</span>
+                </a>
+                <a href="category-conflicts.html?page=1" class="category-card">
+                    <div class="category-icon">⚡</div>
+                    <h2>Скандалы и Конфликты</h2>
+                    <p>Громкие противостояния и интриги</p>
+                    <span class="category-stats">0 статей</span>
+                </a>
+                <a href="category-countries.html?page=1" class="category-card">
+                    <div class="category-icon">🌍</div>
+                    <h2>Страны</h2>
+                    <p>Государства, территории, фракции</p>
+                    <span class="category-stats">0 статей</span>
+                </a>
+            </div>
+        </main>
+
+        <!-- Подвал с логотипом и ссылкой -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="wnn.png" alt="Wilson News Network" class="footer-logo-img" onerror="this.style.display='none'">
+                </div>
+                <div class="footer-text">
+                    <p>Wilson Corporation© 2026. All rights reserved.</p>
+                    <p class="hashtag">#Сфера_Свободы — United in diversity</p>
+                </div>
+                <a href="https://t.me/S1Wilson" class="telegram-btn" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.06-.2s-.17-.04-.25-.02c-.11.02-1.85 1.17-5.21 3.42-.49.34-.94.5-1.34.49-.44-.01-1.29-.25-1.92-.46-.77-.25-1.39-.38-1.34-.8.03-.22.33-.45.91-.68 3.67-1.6 6.12-2.65 7.34-3.17 3.49-1.46 4.21-1.71 4.69-1.71.1 0.34.02.49.15.12.1.16.24.17.35-.01.1-.02.3-.04.48z"/>
+                    </svg>
+                    Telegram
+                </a>
+            </div>
+        </footer>
+    </div>
+    <script src="js/search.js"></script>
+</body>
+</html>
