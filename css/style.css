@@ -571,3 +571,15 @@ body {
 .breadcrumbs .separator {
     color: var(--x-text-secondary);
 }
+
+.category-header-icon {
+    font-size: 32px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+@media (max-width: 640px) {
+    .category-header-icon {
+        font-size: 28px;
+    }
+}
