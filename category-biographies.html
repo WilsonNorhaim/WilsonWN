@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>События — RPWiki</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-wrapper">
+        <header class="site-header">
+            <div class="header-content">
+                <div class="logo-area">
+                    <a href="index.html" style="text-decoration: none;">
+                        <h1 class="logo">RPWiki</h1>
+                    </a>
+                    <span class="logo-badge">beta</span>
+                </div>
+                <div class="search-container">
+                    <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20">
+                        <path fill="currentColor" d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.177-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z"/>
+                    </svg>
+                    <input type="text" placeholder="Поиск по тегам...">
+                </div>
+            </div>
+        </header>
+
+        <!-- Кнопка назад (рабочая) -->
+        <div class="back-navigation">
+            <a href="javascript:history.back()" class="back-button">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                </svg>
+                Назад
+            </a>
+            <!-- Хлебные крошки (альтернатива) -->
+            <div class="breadcrumbs">
+                <a href="index.html">
+                    <svg viewBox="0 0 24 24" width="16" height="16">
+                        <path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                    Главная
+                </a>
+                <span class="separator">/</span>
+                <span>Биографии</span>
+            </div>
+        </div>
+
+        <div class="category-header">
+            <h1>📅 События</h1>
+            <p>Всего статей: 1</p>
+        </div>
+
+        <div class="articles-grid">
+            <!-- Карточка статьи 1 -->
+            <a href="articles/role-piada.html" class="article-card">
+                <span class="article-card-date">15 февраля 2026</span>
+                <h3>История Роле пиады</h3>
+                <p class="article-card-excerpt">Историческое соглашение между тремя крупнейшими государствами, положившее конец затяжному конфликту...</p>
+                <div class="article-tags">
+                    <span class="tag">#ролепиада</span>
+                    <span class="tag">#рпсфера</span>
+                    <span class="tag">#2026</span>
+                </div>
+            </a>
+            <!-- Добавьте еще 29 карточек аналогично -->
+        </div>
+
+        <!-- Пагинация -->
+        <div class="pagination">
+            <a href="?page=1" class="pagination-btn active">1</a>
+            <a href="?page=2" class="pagination-btn">2</a>
+            <a href="?page=3" class="pagination-btn">3</a>
+            <a href="?page=4" class="pagination-btn">4</a>
+            <a href="?page=5" class="pagination-btn">5</a>
+            <span class="pagination-btn">...</span>
+        </div>
+
+        <footer class="site-footer">
+            <!-- аналогично index.html -->
+        </footer>
+    </div>
+</body>
+</html>

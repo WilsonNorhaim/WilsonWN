@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>История Роле-пиады — RPWiki</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .history-emote {
+            font-size: 24px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .history-section {
+            margin: 30px 0;
+            padding: 25px;
+            border-radius: 10px;
+            transition: transform 0.2s;
+            color: #000000; /* Чёрный текст по умолчанию */
+        }
+        .history-section:hover {
+            transform: translateX(5px);
+        }
+        .history-section h2 {
+            color: #000000; /* Чёрный заголовок */
+            margin-top: 0;
+        }
+        .history-section p {
+            color: #000000; /* Чёрный текст */
+        }
+        .history-section ul, 
+        .history-section li {
+            color: #000000; /* Чёрный текст в списках */
+        }
+        .history-section .timeline-badge {
+            color: #ffffff; /* Белый текст на синем бейдже - ок */
+        }
+        .section-origins {
+            background: linear-gradient(135deg, #f5f0ff 0%, #ffffff 100%);
+            border-left: 5px solid #8a2be2;
+        }
+        .section-flourish {
+            background: linear-gradient(135deg, #fff0f0 0%, #ffffff 100%);
+            border-left: 5px solid #ff6b6b;
+        }
+        .section-rebirth {
+            background: linear-gradient(135deg, #f0fff0 0%, #ffffff 100%);
+            border-left: 5px solid #4caf50;
+        }
+        .section-rebirth:hover {
+            border-left-color: #ffd700;
+        }
+        .important-note {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            color: #856404;
+        }
+        .important-note h3 {
+            color: #856404;
+        }
+        .role-piada-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .timeline-badge {
+            display: inline-block;
+            background: #0077be;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        /* Стили для белого текста на тёмных фонах (если такие появятся) */
+        .dark-text {
+            color: #000000;
+        }
+        /* Исправление для ссылок внутри секций */
+        .history-section a {
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-wrapper">
+        <header class="site-header">
+            <div class="header-content">
+                <div class="logo-area">
+                    <a href="../index.html" style="text-decoration: none;">
+                        <h1 class="logo">RPWiki</h1>
+                    </a>
+                    <span class="logo-badge">beta</span>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Поиск по тегам...">
+                </div>
+            </div>
+        </header>
+
+        <!-- Кнопка назад с хлебными крошками -->
+        <div class="back-navigation">
+            <a href="javascript:history.back()" class="back-button">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                </svg>
+                Назад
+            </a>
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <span class="separator">/</span>
+                <a href="../category-history.html">История</a>
+                <span class="separator">/</span>
+                <span>История Роле-пиады</span>
+            </div>
+        </div>
+
+        <main class="article-page">
+            <!-- Дата публикации -->
+            <div class="article-meta-date">
+                Опубликовано: 15 Февраля 2026 · Обновлено: 15 Февраля 2026
+            </div>
+
+            <h1 class="article-title">История Роле-пиады</h1>
+            
+            <!-- Краткое описание -->
+            <div class="article-description">
+                Роле-пиада — ежемесячное ролевое соревнование, придуманное Висказом в июне 2023 года. Прошла путь от зарождения и расцвета до упадка и триумфального возрождения в феврале 2026 года. История о том, как идея может обрести вторую жизнь и стать массовым явлением в RP-сообществе.
+            </div>
+
+            <!-- Изображение -->
+            <div style="text-align: center; margin: 30px 0;">
+                <img src="../images/role-piada.jpg" alt="Роле-пиада" class="role-piada-image" onerror="this.style.display='none'">
+                <div style="color: #666; font-size: 14px; margin-top: 10px;">Символ Роле-пиады</div>
+            </div>
+
+            <!-- Инфобокс -->
+            <div class="wiki-infobox">
+                <div class="infobox-title">Информация о событии</div>
+                <table class="infobox-table">
+                    <tr>
+                        <td class="infobox-label">Дата создания</td>
+                        <td class="infobox-value">Июнь 2023 года</td>
+                    </tr>
+                    <tr>
+                        <td class="infobox-label">Автор идеи</td>
+                        <td class="infobox-value">Висказ</td>
+                    </tr>
+                    <tr>
+                        <td class="infobox-label">Период расцвета</td>
+                        <td class="infobox-value">Июнь 2023 — Март 2024</td>
+                    </tr>
+                    <tr>
+                        <td class="infobox-label">Дата возрождения</td>
+                        <td class="infobox-value">8-9 февраля 2026 года</td>
+                    </tr>
+                    <tr>
+                        <td class="infobox-label">Инициатор возрождения</td>
+                        <td class="infobox-value">Феникс</td>
+                    </tr>
+                    <tr>
+                        <td class="infobox-label">Тип события</td>
+                        <td class="infobox-value">Ролевое соревнование</td>
+                    </tr>
+                    <tr>
+                        <td class="infobox-label">Периодичность</td>
+                        <td class="infobox-value">Ежемесячная (до упадка)</td>
+                    </tr>
+                    <tr>
+                        <td class="infobox-label">Статус</td>
+                        <td class="infobox-value">Возрождена, активно проводится</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Развернутое описание -->
+            <div class="article-full-content">
+                
+                <div class="history-section section-origins">
+                    <h2>
+                        <span class="history-emote">🤔</span> 
+                        Как зарождалась Роле-пиада?
+                    </h2>
+                    <div class="timeline-badge">Июнь 2023</div>
+                    <p>Саму роле-пиаду придумал <strong>Висказ</strong> в июне 2023 года. Она была вдохновлена другим, подобным соревнованием в командах. После недолгого времени разработки была создана первая роле-пиада.</p>
+                    
+                    <p><strong>В первой роле-пиаде участвовали крупные ВПИ (Вселенные Персонажей Игр):</strong></p>
+                    <ul>
+                        <li>Гринвель</li>
+                        <li>Меджик</li>
+                        <li>Новая эра</li>
+                        <li>И другие</li>
+                    </ul>
+                </div>
+
+                <div class="history-section section-flourish">
+                    <h2>
+                        <span class="history-emote">😓</span> 
+                        Её процветание и упадок
+                    </h2>
+                    <div class="timeline-badge">Июнь 2023 — Март 2024</div>
+                    <p>По началу идея роле-пиады народу очень понравилась. И поэтому её начали проводить ежемесячно. Однако со временем из-за своей частоты она надоела народу. Хоть и пытались делать разные форматы оформления, но постепенно она переставала пользоваться популярностью.</p>
+                    
+                    <p><strong>Последняя роле-пиада</strong> оригинального периода была проведена в марте 2024 года.</p>
+                    
+                    <div style="background: rgba(255,255,255,0.7); padding: 15px; border-radius: 8px; margin-top: 15px; color: #000000;">
+                        <p style="margin: 0; color: #000000;"><em>Причины упадка:</em> слишком частые проведения (ежемесячные), отсутствие разнообразия форматов со временем, естественное снижение интереса аудитории.</p>
+                    </div>
+                </div>
+
+                <div class="history-section section-rebirth">
+                    <h2>
+                        <span class="history-emote">😄</span> 
+                        Возрождение Роле-пиады!
+                    </h2>
+                    <div class="timeline-badge">8-9 февраля 2026</div>
+                    
+                    <p><strong>8 февраля 2026 года</strong> — Феникс вспоминает про роле-пиаду. После недолгих переговоров с Висказом, тот выдал лицензию на её проведение, думая что идея провальная, так как она умерла в прошлом.</p>
+                    
+                    <p><strong>9 февраля 2026 года</strong> — Феникс начинает проведение роле-пиады... И она очень сильно и быстро залетела. Люди пошли рекой, и был большой шум в RP-сфере.</p>
+                    
+                    <div style="background: rgba(255,255,255,0.7); padding: 20px; border-radius: 8px; margin: 20px 0; color: #000000;">
+                        <p style="font-size: 18px; font-weight: bold; margin-bottom: 10px; color: #000000;">✨ Результат возрождения:</p>
+                        <p style="color: #000000;">По словам друга, <em>"уже каждый второй делает такую пиаду"</em>, что в принципе является правдой. Сейчас во многих новостниках, у которых около 100 или меньше подписчиков, можно заметить какую-то пиаду.</p>
+                    </div>
+                </div>
+
+                <!-- Важное обращение -->
+                <div class="important-note">
+                    <h3 style="color: #856404; margin-top: 0;">⚠️ Важное обращение</h3>
+                    <p style="color: #856404;">Пожалуйста, не стоит забывать, кто вернул эту идею и показал, что она не мертва.</p>
+                    <p style="color: #856404;">Если вы — владелец новостника, который собирается проводить подобную пиаду, можете хотя бы мельком указать наш канал и канал Феникса хотя бы в одном посте, снизу, мелким шрифтом, указать, что идея была взята отсюда.</p>
+                    <div style="margin-top: 15px; padding: 10px; background: white; border-radius: 5px; font-family: monospace; color: #333;">
+                        Пример: "Идея пиады взята у @канал_Феникса"
+                    </div>
+                </div>
+
+                <h2>Наследие и влияние</h2>
+                <p>История Роле-пиады — это яркий пример того, как идея может пережить периоды забвения и триумфально вернуться, став массовым трендом. От первой разработки Висказом в 2023 году до взрывного возрождения Фениксом в 2026, Роле-пиада доказала свою жизнеспособность и стала неотъемлемой частью культуры RP-сообщества.</p>
+                
+                <p>На данный момент формат продолжает распространяться, и многие новостные каналы адаптируют его под свои нужды, сохраняя основную механику, заложенную изначально.</p>
+
+                <!-- Хронология для быстрого ознакомления -->
+                <h2>Краткая хронология</h2>
+                <ul style="list-style-type: none; padding-left: 0;">
+                    <li style="margin: 10px 0; padding: 10px; background: #f5f5f5; border-radius: 5px; color: #000000;">
+                        <strong>🔹 Июнь 2023:</strong> Висказ придумывает Роле-пиаду
+                    </li>
+                    <li style="margin: 10px 0; padding: 10px; background: #f5f5f5; border-radius: 5px; color: #000000;">
+                        <strong>🔹 Лето 2023 — весна 2024:</strong> Ежемесячные проведения, расцвет и постепенный упадок
+                    </li>
+                    <li style="margin: 10px 0; padding: 10px; background: #f5f5f5; border-radius: 5px; color: #000000;">
+                        <strong>🔹 Март 2024:</strong> Последняя роле-пиада оригинального периода
+                    </li>
+                    <li style="margin: 10px 0; padding: 10px; background: #d4edda; border-radius: 5px; color: #000000;">
+                        <strong>🔹 8 февраля 2026:</strong> Феникс вспоминает об идее, получает лицензию
+                    </li>
+                    <li style="margin: 10px 0; padding: 10px; background: #d4edda; border-radius: 5px; color: #000000;">
+                        <strong>🔹 9 февраля 2026:</strong> Запуск возрождённой Роле-пиады, моментальный успех
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <!-- Здесь можно добавить футер -->
+        </footer>
+    </div>
+
+    <script>
+        // Дополнительная защита для кнопки назад в Telegram Mini Apps
+        document.addEventListener('DOMContentLoaded', function() {
+            const backButton = document.querySelector('.back-button');
+            if (backButton) {
+                backButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (document.referrer) {
+                        history.back();
+                    } else {
+                        window.location.href = '../index.html';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
