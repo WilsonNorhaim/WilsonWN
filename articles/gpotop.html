@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Great deluge — RPWiki</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Исправление ширины */
+        .app-wrapper {
+            width: 100%;
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+        .article-page {
+            max-width: 100%;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+        .article-full-content {
+            max-width: 100%;
+            word-wrap: break-word;
+        }
+        .wiki-infobox {
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        
+        /* ТЁМНЫЙ ФОН КАК В X (TWITTER) */
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            background-color: #000000;
+            color: #e7e9ea;
+        }
+        
+        /* Заголовки и текст статьи - СВЕТЛЫЕ */
+        .article-title {
+            color: #ffffff !important;
+        }
+        
+        .article-description {
+            color: #e7e9ea !important;
+        }
+        
+        .article-full-content h2 {
+            color: #ffffff !important;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        
+        .article-full-content h3 {
+            color: #ffffff !important;
+        }
+        
+        .article-full-content p,
+        .article-full-content li,
+        .article-full-content ul,
+        .article-full-content strong {
+            color: #e7e9ea !important;
+        }
+        
+        /* Хлебные крошки */
+        .breadcrumbs, .breadcrumbs a, .breadcrumbs span {
+            color: #8899a6 !important;
+        }
+        
+        .breadcrumbs a:hover {
+            color: #1d9bf0 !important;
+        }
+        
+        /* Дата публикации */
+        .article-meta-date {
+            color: #8899a6 !important;
+        }
+        
+        /* Исправление для инфобокса */
+        .infobox-table {
+            width: 100%;
+            table-layout: fixed;
+        }
+        .infobox-label, .infobox-value {
+            word-wrap: break-word;
+        }
+        
+        /* Кнопка назад */
+        .back-button {
+            color: #8899a6 !important;
+        }
+        
+        .back-button:hover {
+            color: #1d9bf0 !important;
+        }
+        
+        /* Стили для ссылок */
+        a {
+            color: #1d9bf0 !important;
+        }
+        
+        a:hover {
+            color: #1a8cd8 !important;
+        }
+        
+        /* Стиль для подписи автора */
+        .article-author {
+            color: #8899a6;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        
+        /* Стиль для флагов и символов */
+        .warring-sides {
+            margin: 20px 0;
+            padding: 15px;
+            background: #15181c;
+            border-radius: 10px;
+            border-left: 4px solid #1d9bf0;
+        }
+        
+        .warring-sides p {
+            margin: 8px 0;
+        }
+        
+        .emoji-flag {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+        
+        /* Стиль для статистики */
+        .casualties-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-block {
+            background: #15181c;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #333;
+        }
+        
+        .stat-block h4 {
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .stat-numbers {
+            color: #1d9bf0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .stat-note {
+            color: #8899a6;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-wrapper">
+        <header class="site-header">
+            <div class="header-content">
+                <div class="logo-area">
+                    <a href="../index.html" style="text-decoration: none;">
+                        <h1 class="logo" style="color: #ffffff !important;">RPWiki</h1>
+                    </a>
+                    <span class="logo-badge" style="color: #8899a6 !important;">beta</span>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Поиск по тегам..." style="background-color: #202327; color: #e7e9ea; border: 1px solid #333;">
+                </div>
+            </div>
+        </header>
+
+        <!-- Кнопка назад с хлебными крошками -->
+        <div class="back-navigation">
+            <a href="javascript:history.back()" class="back-button">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="#8899a6">
+                    <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                </svg>
+                Назад
+            </a>
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <span class="separator">/</span>
+                <a href="../category-history.html">История</a>
+                <span class="separator">/</span>
+                <span>Great deluge</span>
+            </div>
+        </div>
+
+        <main class="article-page">
+            <!-- Дата публикации -->
+            <div class="article-meta-date">
+                Опубликовано: 17 Февраля 2026 · Wilson
+            </div>
+
+            <h1 class="article-title">Great deluge</h1>
+            
+            <!-- Автор -->
+            <div class="article-author">
+                February 6, 2025 by Zloy Aleroy
+            </div>
+            
+            <!-- Краткое описание - оставляем пустым -->
+            <div class="article-description">
+                <!-- Пустое описание -->
+            </div>
+
+            <!-- Развернутое описание -->
+            <div class="article-full-content">
+                <p>Великий потоп, или "Great deluge" произошел из-за постояной агрессии Московии.</p>
+                
+                <p>(Названо "Великий потоп" потому что деление Московии произошло с морей, и сама Московия была колониальной империей)</p>
+                
+                <div class="warring-sides">
+                    <h3>Стороны конфликта:</h3>
+                    <p><span class="emoji-flag">🏴‍☠️</span> Коалиция: Корлен / Зальд / Хазафирия / Ландсберг</p>
+                    <p><span class="emoji-flag">🏴</span> Московия</p>
+                </div>
+                
+                <div class="warring-sides">
+                    <h3>Сила сторон:</h3>
+                    <p>Коалиция: 700.000+</p>
+                    <p>Московия: 1.000.000+</p>
+                </div>
+                
+                <h3>Потери:</h3>
+                
+                <div class="casualties-stats">
+                    <div class="stat-block">
+                        <h4>⚔️ Коалиция</h4>
+                        <div class="stat-numbers">200.000 - 270.000</div>
+                        <div class="stat-note">военные потери</div>
+                    </div>
+                    
+                    <div class="stat-block">
+                        <h4>⚔️ Московия</h4>
+                        <div class="stat-numbers">400.000 - 620.000</div>
+                        <div class="stat-note">военные потери</div>
+                    </div>
+                    
+                    <div class="stat-block">
+                        <h4>🕊️ Мирные Зальда</h4>
+                        <div class="stat-numbers">более 70.000</div>
+                    </div>
+                    
+                    <div class="stat-block">
+                        <h4>🕊️ Мирные Московии</h4>
+                        <div class="stat-numbers">6.000.000 и более</div>
+                        <div class="stat-note">Из-за массовых репрессий разных стран, уничтожения армии в первом делении Московии Корленом и Вишнусией.</div>
+                    </div>
+                </div>
+                
+                <p>Также более 3.000.000 лояльных Московийцев было убито или посаженно в Хазафирии.</p>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <!-- Здесь можно добавить футер -->
+        </footer>
+    </div>
+
+    <script>
+        // Дополнительная защита для кнопки назад в Telegram Mini Apps
+        document.addEventListener('DOMContentLoaded', function() {
+            const backButton = document.querySelector('.back-button');
+            if (backButton) {
+                backButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (document.referrer) {
+                        history.back();
+                    } else {
+                        window.location.href = '../index.html';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
