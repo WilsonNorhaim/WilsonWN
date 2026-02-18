@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Диего Вилизариус фон Джошуа (Иникс) — RPWiki</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Исправление ширины */
+        .app-wrapper {
+            width: 100%;
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+        .article-page {
+            max-width: 100%;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+        .article-full-content {
+            max-width: 100%;
+            word-wrap: break-word;
+        }
+        .wiki-infobox {
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        
+        /* ТЁМНЫЙ ФОН КАК В X (TWITTER) */
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            background-color: #000000;
+            color: #e7e9ea;
+        }
+        
+        /* Заголовки и текст статьи - СВЕТЛЫЕ */
+        .article-title {
+            color: #ffffff !important;
+        }
+        
+        .article-description {
+            color: #e7e9ea !important;
+        }
+        
+        .article-full-content h2 {
+            color: #ffffff !important;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        
+        .article-full-content h3 {
+            color: #ffffff !important;
+        }
+        
+        .article-full-content p,
+        .article-full-content li,
+        .article-full-content ul,
+        .article-full-content strong {
+            color: #e7e9ea !important;
+        }
+        
+        /* Хлебные крошки */
+        .breadcrumbs, .breadcrumbs a, .breadcrumbs span {
+            color: #8899a6 !important;
+        }
+        
+        .breadcrumbs a:hover {
+            color: #1d9bf0 !important;
+        }
+        
+        /* Дата публикации */
+        .article-meta-date {
+            color: #8899a6 !important;
+        }
+        
+        /* Исправление для инфобокса */
+        .infobox-table {
+            width: 100%;
+            table-layout: fixed;
+        }
+        .infobox-label, .infobox-value {
+            word-wrap: break-word;
+        }
+        
+        /* Кнопка назад */
+        .back-button {
+            color: #8899a6 !important;
+        }
+        
+        .back-button:hover {
+            color: #1d9bf0 !important;
+        }
+        
+        /* Стили для ссылок */
+        a {
+            color: #1d9bf0 !important;
+        }
+        
+        a:hover {
+            color: #1a8cd8 !important;
+        }
+        
+        /* Стиль для подписи автора */
+        .article-author {
+            color: #8899a6;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        
+        /* Стиль для биографической хронологии */
+        .timeline-bio {
+            margin: 25px 0;
+        }
+        
+        .bio-event {
+            display: flex;
+            margin: 15px 0;
+            padding: 10px 15px;
+            background: #15181c;
+            border-radius: 8px;
+            border-left: 4px solid #1d9bf0;
+        }
+        
+        .bio-year {
+            min-width: 80px;
+            font-weight: 700;
+            color: #1d9bf0;
+        }
+        
+        .bio-desc {
+            color: #e7e9ea;
+        }
+        
+        /* Стиль для военных наград */
+        .award-badge {
+            display: inline-block;
+            background: #2d3e50;
+            color: #ffd700;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin: 2px 5px 2px 0;
+            border: 1px solid #4a5c6e;
+        }
+        
+        /* Инфобокс персоналии */
+        .person-infobox {
+            background: #15181c;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .person-name {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+        
+        .person-subname {
+            color: #8899a6;
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .person-detail {
+            display: flex;
+            margin: 8px 0;
+            border-bottom: 1px solid #2a2f35;
+            padding-bottom: 5px;
+        }
+        
+        .person-detail-label {
+            min-width: 120px;
+            color: #8899a6;
+        }
+        
+        .person-detail-value {
+            color: #e7e9ea;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-wrapper">
+        <header class="site-header">
+            <div class="header-content">
+                <div class="logo-area">
+                    <a href="../index.html" style="text-decoration: none;">
+                        <h1 class="logo" style="color: #ffffff !important;">RPWiki</h1>
+                    </a>
+                    <span class="logo-badge" style="color: #8899a6 !important;">beta</span>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Поиск по тегам..." style="background-color: #202327; color: #e7e9ea; border: 1px solid #333;">
+                </div>
+            </div>
+        </header>
+
+        <!-- Кнопка назад с хлебными крошками -->
+        <div class="back-navigation">
+            <a href="javascript:history.back()" class="back-button">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="#8899a6">
+                    <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                </svg>
+                Назад
+            </a>
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <span class="separator">/</span>
+                <a href="../category-people.html">Персоналии</a>
+                <span class="separator">/</span>
+                <span>Диего Вилизариус фон Джошуа (Иникс)</span>
+            </div>
+        </div>
+
+        <main class="article-page">
+            <!-- Дата публикации -->
+            <div class="article-meta-date">
+                Опубликовано: 18 Февраля 2026 · Герман
+            </div>
+
+            <h1 class="article-title">Диего Вилизариус фон Джошуа (Иникс)</h1>
+            
+            <!-- Автор -->
+            <div class="article-author">
+                Автобиография от самого Иникса
+            </div>
+            
+            <!-- Краткое описание -->
+            <div class="article-description">
+                Иникс побывал на службе в армиях Германии и Турции, также получил награды, затем окончил образование и поехал на остров Новая Империя.
+            </div>
+
+            <!-- Инфобокс персоналии -->
+            <div class="person-infobox">
+                <div class="person-name">Диего Вилизариус фон Джошуа</div>
+                <div class="person-subname">прозвище: Иникс</div>
+                
+                <div class="person-detail">
+                    <span class="person-detail-label">Дата рождения:</span>
+                    <span class="person-detail-value">1892 год</span>
+                </div>
+                
+                <div class="person-detail">
+                    <span class="person-detail-label">Место рождения:</span>
+                    <span class="person-detail-value">Гамбург, Германская империя</span>
+                </div>
+                
+                <div class="person-detail">
+                    <span class="person-detail-label">Происхождение:</span>
+                    <span class="person-detail-value">Дворянский род</span>
+                </div>
+                
+                <div class="person-detail">
+                    <span class="person-detail-label">Военная служба:</span>
+                    <span class="person-detail-value">Германия, Турция</span>
+                </div>
+                
+                <div class="person-detail">
+                    <span class="person-detail-label">Звания:</span>
+                    <span class="person-detail-value">Лейтенант (1908), Старший лейтенант (1910), Капитан (1912), Капитан 3-го ранга (1913)</span>
+                </div>
+                
+                <div class="person-detail">
+                    <span class="person-detail-label">Награды:</span>
+                    <span class="person-detail-value"><span class="award-badge">Орден Креста 1-го класса</span></span>
+                </div>
+                
+                <div class="person-detail">
+                    <span class="person-detail-label">Образование:</span>
+                    <span class="person-detail-value">Кадетский корпус, Юридическое образование</span>
+                </div>
+                
+                <div class="person-detail">
+                    <span class="person-detail-label">Известные постройки:</span>
+                    <span class="person-detail-value">Оружейный завод, Банк, инфраструктурные объекты</span>
+                </div>
+            </div>
+
+            <!-- Развернутое описание - автобиография -->
+            <div class="article-full-content">
+                <p>Диего Вилизариус фон Джошуа, родился в 1892 году, в городе Гамбурге. Мои родители были из дворянского рода, не сильно известного, но и не то чтобы неизвестный. С юных лет я интересовался кораблями и историей, мне была интересна: физика механика, инженерия и тактика, я любил устраивать войнушки пластмассовыми солдатиками.</p>
+                
+                <div class="timeline-bio">
+                    <div class="bio-event">
+                        <span class="bio-year">1906:</span>
+                        <span class="bio-desc">Отправлен в кадетский корпус, обучение прямо на судне! Попал на подлодку U-Boot, и больше её никогда не покидал (в плане смены судна).</span>
+                    </div>
+                    
+                    <div class="bio-event">
+                        <span class="bio-year">1908:</span>
+                        <span class="bio-desc">Получил звание лейтенанта за успехи в службе. Уже был младшим помощником командира судна. На боевых учениях смог определить точное направление движения "вражеской" подлодки и тем самым подбив её целых 3 раза, а после по условиям "БУ" она затонула. Это был успех, тем самым я и получил звание лейтенанта.</span>
+                    </div>
+                    
+                    <div class="bio-event">
+                        <span class="bio-year">1910:</span>
+                        <span class="bio-desc">Выпустился из кадетки старшим лейтенантом и отправился в гамбургский порт, для полноценной службы на подлодке.</span>
+                    </div>
+                    
+                    <div class="bio-event">
+                        <span class="bio-year">1911:</span>
+                        <span class="bio-desc">Получил должность помощника командира судна и встретил там Хэрра Люциуса. Начал изучение Юрисдикции (начал получать юридическое образование).</span>
+                    </div>
+                    
+                    <div class="bio-event">
+                        <span class="bio-year">1912:</span>
+                        <span class="bio-desc">Отправился в Турцию добровольцем, где и получил звание капитана. На турецком флоте стал хорошим командиром, во время Балканских войн держал блокаду и атаковал вражеские флотилии рядом со столицей Болгарии.</span>
+                    </div>
+                    
+                    <div class="bio-event">
+                        <span class="bio-year">1913:</span>
+                        <span class="bio-desc">Произошло ЧП. В мой линкор попала торпеда, которая подожгла снаряды на нижнем ярусе, для палубных гаубиц. Я не отступил, и отправился в самое пекло, чтобы нарочно затопить тот отсек, чуть ли сам себя не затопив, но я смог устранить пожар, а и вследствии и пробоину на корабле, за это я получил 1-го класса ордер креста и звание капитан 3-его ранга, а также отпуск.</span>
+                    </div>
+                    
+                    <div class="bio-event">
+                        <span class="bio-year">1914:</span>
+                        <span class="bio-desc">До лета отдыхал, ездил по всяким городам, и узнавал новых личностей, встретил много генералов, известных личностей и даже встретил Альберта Эйнштейна! А также почти закончил юридическое образование (но не высшее). К лету 1914 года встретил Хэрра Германа, который мне и поведал про тот остров, я решил, что хватит с меня карьерной службы и решил повесить свою фуражку на гвоздь.</span>
+                    </div>
+                    
+                    <div class="bio-event">
+                        <span class="bio-year">1915:</span>
+                        <span class="bio-desc">Закончил военную карьеру и уже полноценно закончил юридическое, и мог уже почти полноценно говорить по закону. Где-то в апреле приплыл на остров, мне он понравился (ещё до Новой Империи) и я организовал ряд важных зданий (таких как Оружейный Завод (одна из первых), Банк и ещё ряд инфраструктуры).</span>
+                    </div>
+                </div>
+                
+                <p>Но из-за революции, по приказу Федора (Императора Старой Империи) мои здания перешли под государственную структуру и мне пришлось отдать ему здания, но я решил не оставлять это ему с проста, я перешел на сторону Германа (Императора Новой Империи) так как он был и моим сторонником в партии и моим лучшим другом. Далее вы знаете всю историю...</p>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <!-- Здесь можно добавить футер -->
+        </footer>
+    </div>
+
+    <script>
+        // Дополнительная защита для кнопки назад в Telegram Mini Apps
+        document.addEventListener('DOMContentLoaded', function() {
+            const backButton = document.querySelector('.back-button');
+            if (backButton) {
+                backButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (document.referrer) {
+                        history.back();
+                    } else {
+                        window.location.href = '../index.html';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
