@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Поиск — RPWiki</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-wrapper">
+        <header class="site-header">
+            <div class="header-content">
+                <div class="logo-area">
+                    <a href="index.html" style="text-decoration: none;">
+                        <h1 class="logo">RPWiki</h1>
+                    </a>
+                    <span class="logo-badge">beta</span>
+                </div>
+                <div class="search-container">
+                    <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20">
+                        <path fill="currentColor" d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.177-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z"/>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Поиск по тегам..." value="">
+                </div>
+            </div>
+        </header>
+
+        <!-- Кнопка назад -->
+        <div class="back-navigation">
+            <a href="javascript:history.back()" class="back-button">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                </svg>
+                Назад
+            </a>
+        </div>
+
+        <div class="search-results-page">
+            <div class="category-header">
+                <h1>🔍 Результаты поиска</h1>
+                <p id="searchQuery">По запросу: </p>
+            </div>
+
+            <!-- Здесь будут результаты -->
+            <div class="articles-grid" id="searchResults">
+                <!-- JavaScript вставит результаты сюда -->
+            </div>
+
+            <!-- Сообщение если ничего не найдено -->
+            <div id="noResults" style="display: none; text-align: center; padding: 40px; color: var(--x-text-secondary);">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor" style="opacity: 0.5; margin-bottom: 16px;">
+                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                </svg>
+                <h3>Ничего не найдено</h3>
+                <p>Попробуйте другой поисковый запрос</p>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="wnn.png" alt="Wilson News Network" class="footer-logo-img" onerror="this.style.display='none'">
+                </div>
+                <div class="footer-text">
+                    <p>Wilson News Network © 2025. Все права защищены.</p>
+                    <p class="hashtag">#Сфера_Свободы — United in diversity</p>
+                </div>
+                <a href="https://t.me/S1Wilson" class="telegram-btn" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.06-.2s-.17-.04-.25-.02c-.11.02-1.85 1.17-5.21 3.42-.49.34-.94.5-1.34.49-.44-.01-1.29-.25-1.92-.46-.77-.25-1.39-.38-1.34-.8.03-.22.33-.45.91-.68 3.67-1.6 6.12-2.65 7.34-3.17 3.49-1.46 4.21-1.71 4.69-1.71.1 0 .34.02.49.15.12.1.16.24.17.35-.01.1-.02.3-.04.48z"/>
+                    </svg>
+                    Telegram
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Функция для получения параметра из URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // База данных статей (в реальности лучше грузить из JSON)
+        const articlesDatabase = [
+            {
+                title: "Великое перемирие Свободных земель",
+                date: "15 марта 2025",
+                excerpt: "Great Delug",
+                tags: ["Гринвель", "Delug", "2026"],
+                category: "events",
+                link: "articles/gpotop.html",
+                icon: "📅"
+            },
+            {
+                title: "Моя страна из РП",
+                date: "10 февраля 2026",
+                excerpt: "Описание моего государства в ролевой игре...",
+                tags: ["страна", "государство", "политика"],
+                category: "countries",
+                link: "articles/my-country.html",
+                icon: "🌍"
+            },
+            {
+                title: "Название книги",
+                date: "14 февраля 2026",
+                excerpt: "Аудиокнига с записью 1 час 23 минуты...",
+                tags: ["книга", "аудио", "литература"],
+                category: "books",
+                link: "articles/book.html",
+                icon: "📚"
+            }
+            // Добавьте сюда все свои статьи
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchQuerySpan = document.getElementById('searchQuery');
+            const resultsContainer = document.getElementById('searchResults');
+            const noResultsDiv = document.getElementById('noResults');
+            
+            // Получаем поисковый запрос из URL
+            const tagQuery = getQueryParam('tag');
+            
+            if (tagQuery) {
+                // Показываем что ищем
+                searchQuerySpan.textContent = `По запросу: "${tagQuery}"`;
+                
+                // Заполняем поле поиска
+                if (searchInput) {
+                    searchInput.value = tagQuery;
+                }
+                
+                // Ищем статьи по тегам (регистронезависимо)
+                const searchTerm = tagQuery.toLowerCase();
+                const results = articlesDatabase.filter(article => {
+                    return article.tags.some(tag => tag.toLowerCase().includes(searchTerm));
+                });
+                
+                // Отображаем результаты
+                if (results.length > 0) {
+                    noResultsDiv.style.display = 'none';
+                    
+                    results.forEach(article => {
+                        const card = document.createElement('a');
+                        card.href = article.link;
+                        card.className = 'article-card';
+                        
+                        // Создаем теги
+                        const tagsHtml = article.tags.map(tag => 
+                            `<span class="tag">#${tag}</span>`
+                        ).join('');
+                        
+                        card.innerHTML = `
+                            <span class="article-card-date">${article.date}</span>
+                            <h3>${article.icon} ${article.title}</h3>
+                            <p class="article-card-excerpt">${article.excerpt}</p>
+                            <div class="article-tags">
+                                ${tagsHtml}
+                            </div>
+                        `;
+                        
+                        resultsContainer.appendChild(card);
+                    });
+                } else {
+                    // Ничего не найдено
+                    noResultsDiv.style.display = 'block';
+                }
+            }
+            
+            // Обработчик поиска (как и в search.js)
+            if (searchInput) {
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        const query = this.value.trim();
+                        if (query) {
+                            window.location.href = 'search-results.html?tag=' + encodeURIComponent(query);
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
